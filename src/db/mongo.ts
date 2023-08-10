@@ -21,17 +21,17 @@ const studentSchema = new mongoose.Schema<Student>({
 
 const StudentSchema = mongoose.model('Student', studentSchema)
 
-Array.from({ length: 100 }).forEach(async () => {
-  const student = new StudentSchema({
-    firstName: faker.person.firstName(),
-    lastName: faker.person.lastName(),
-    age: faker.helpers.rangeToNumber({ min: 18, max: 25 }),
-    city: faker.location.city(),
-    mark: faker.helpers.rangeToNumber({ min: 1, max: 10 }),
-    avatar: faker.image.avatar()
-  })
-  await student.save()
-})
+// Array.from({ length: 100 }).forEach(async () => {
+//   const student = new StudentSchema({
+//     firstName: faker.person.firstName(),
+//     lastName: faker.person.lastName(),
+//     age: faker.helpers.rangeToNumber({ min: 18, max: 25 }),
+//     city: faker.location.city(),
+//     mark: faker.helpers.rangeToNumber({ min: 1, max: 10 }),
+//     avatar: faker.image.avatar()
+//   })
+//   await student.save()
+// })
 // ;(async () => {
 //   await StudentSchema.deleteMany({})
 // })()
